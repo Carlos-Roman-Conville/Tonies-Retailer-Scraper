@@ -4,7 +4,7 @@ Pulls the full US retailer network from the Tonies store locator, then enriches 
 
 Two stages, because the locator gives you locations but not the contact data that makes a list usable.
 
-## Stage 1 — Scrape locations
+## Stage 1: Scrape locations
 
 ```bash
 python scrape_tonies.py
@@ -12,7 +12,7 @@ python scrape_tonies.py
 
 Walks the store locator and captures name, address, city, state, ZIP, phone, and coordinates for every listed retailer. Output is raw JSON in `output/`.
 
-## Stage 2 — Enrich contacts
+## Stage 2: Enrich contacts
 
 ```bash
 python enrich_emails.py output/tonies_raw_<timestamp>.json
@@ -27,7 +27,7 @@ Independent toy and gift shops frequently have no site in the locator, so the se
 
 ## Output
 
-Enriched JSON and CSV containing the original location fields plus resolved website and any emails found — the format a sales team can import directly.
+Enriched JSON and CSV containing the original location fields plus resolved website and any emails found, the format a sales team can import directly.
 
 ## Stack
 
